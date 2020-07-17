@@ -1,12 +1,117 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/logotype-mobile.svg" width="150" height="150" alt="Логотип Кэт энерджи">
+      </a>
+      <h2 class="page-header__text">cat energy</h2>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a>Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a>Формы</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login js-login" href="login.html">
+                Войти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Еда для котов</h1>
+      <section class="first">
+        <h2 class="first__header1">Функциональное питание для котов</h2>
+        <h3 class="first__header2">Занялся собой - займись котом</h3>
+        <img src="img/first-picture-mobile.svg" width="350" height="350" alt="Еда Кэт энерджи">
+        <button class="first__toggle" type="button"><span class="first__toggle--name">Подобрать программу</span></button>
+      </section>
+
+      <section class="slimming">
+        <h2 class="slimming__header">Похудение</h2>
+        <img src="img/slimming-mobile.svg" width="150" height="150" alt="Пантера">
+        <p class="slimming__text1">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! can Enargy Skim поможет вашему питомцу сбросить лишний вес.</p>
+        <p class="slimming__text2">Каталог slim</p>
+        <a class="slimming__arrow">
+          <img src="img/arrow-mobile.svg" width="150" height="150" alt="Стрелка (мобильная)">
+        </a>
+      </section>
+
+      <section class="weight-gain">
+        <h2 class="weight-gain__header">Набор массы</h2>
+        <img src="img/weight-gain-mobile.svg" width="150" height="150" alt="Тигр">
+        <p class="weight-gain__text1">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы</p>
+        <p class="weight-gain__text2">Каталог slim</p>
+        <a class="slimming__arrow">
+          <img src="img/arrow-mobile.svg" width="150" height="150" alt="Стрелка (мобильная)">
+        </a>
+      </section>
+
+      <section class="work">
+        <h2 class="work__header">Как это работает</h2>
+        <div class="work__petal">
+          <img src="img/petal-mobile.svg" width="150" height="150" alt="Лепесток (мобильная)">
+          <p class="work__petal-text">Функциональное питание содержит только полезные питательные вещества</p>
+        </div>
+        <div class="work__water">
+          <img src="img/water-mobile.svg" width="150" height="150" alt="Вода (мобильная)">
+          <p class="work__water-text">Выпускается в виде порошка, который нужно лишь залить кипятком и всё готово.</p>
+        </div>
+        <div class="work__fork">
+          <img src="img/fork-mobile.svg" width="150" height="150" alt="Вилка (мобильная)">
+          <p class="work__fork-text">Замените один-два приёма пищи на наше функциональное питание</p>
+        </div>
+        <div class="work__clock">
+          <img src="img/clock-mobile.svg" width="150" height="150" alt="Часы (мобильная)">
+          <p class="work__petal-text">Уже через месяц наслаждайтесь изменениям к лучшему вашего питомца</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__text">
+        <b class="page-footer__text1">Cat</b>
+        <b class="page-footer__text2">Energy</b>
+      </div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__logo">
+          <img src="img/logocopyright-mobile.svg" width="150" height="100" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
 
   </body>
 </html>

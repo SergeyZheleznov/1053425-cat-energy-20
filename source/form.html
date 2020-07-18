@@ -4,32 +4,22 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page-body">
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="150" height="150" alt="Логотип Кэт энерджи">
-      </a>
-      <h2 class="page-header__text">cat energy</h2>
+      <a class="page-header__logo" href="index.html"><img src="img/logotype-mobile.svg" width="150" height="150" alt="Логотип Кэт энерджи"></a>
+      <button class="page-header__button"><span class="visually-hidden">Кнопка меню</span></button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a>Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a>Каталог</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Формы</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__login js-login" href="login.html">
-                Войти
-              </a>
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -37,10 +27,9 @@
     </header>
 
     <footer class="page-footer">
-      <div class="page-footer__text">
-        <b class="page-footer__text1">Cat</b>
-        <b class="page-footer__text2">Energy</b>
-      </div>
+      <a class="page-footer__cat-energy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="img/cat-energy-logo-mobile.svg" width="150" height="100" alt="HTML Academy">
+      </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -55,12 +44,10 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="page-footer__logo">
-          <img src="img/logocopyright-mobile.svg" width="150" height="100" alt="HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <img src="img/logocopyright-mobile.svg" width="150" height="100" alt="Логотип Академии">
         </a>
       </div>
     </footer>
-
   </body>
 </html>

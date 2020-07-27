@@ -6,56 +6,47 @@
 .first__wrap {
   position: relative;
 
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 320px;
   height: 305px;
   background-image: url("../img/index-background-mobile@1x.jpg");
+
+  outline: 1px solid red;
 }
 
 .first__title {
-  position: absolute;
-  top: 27px;
-  left: 36px;
-
-  font-style: normal;
-  font-weight: normal;
+  margin-top: 27px;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
 
   color: #ffffff;
+  outline: 1px solid red;
 }
 
 .first__make {
-  position: absolute;
-  top: 124px;
-  left: 60px;
-
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
 
   color: #ffffff;
+  outline: 1px solid red;
 }
 
-.first__picture {
-  position: absolute;
-  top: 168px;
-  left: 20px;
+
+.firt__picture {
+  margin-top: 50px;
 }
 
 .first__toggle {
-  position: absolute;
-  top: 440px;
-  left: 20px;
-
   display: flex;
   flex-direction: row;
   width: 280px;
   height: 40px;
+  margin-top: 140px;
+  margin-left: 20px;
 
   text-decoration: none;
   background-color: #68b738;
@@ -67,8 +58,6 @@
   margin-top: 12px;
   margin-left: 44px;
 
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   text-align: center;

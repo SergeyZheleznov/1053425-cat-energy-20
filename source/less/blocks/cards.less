@@ -1,0 +1,128 @@
+.cards {
+  margin: 0;
+  padding: 0;
+}
+
+.cards__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 320px;
+  height: 209px;
+
+
+  border-bottom: 1px solid #ebebeb;
+}
+
+.cards__link-item {
+  text-decoration: none;
+}
+
+.cards__item-name {
+  font-size: 16px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+  text-align: left;
+  color: #222222;
+}
+
+.cards__table {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+
+  text-align: left;
+  color: #444444;
+}
+
+.cards__link {
+  display: block;
+
+  width: 280px;
+  height: 40px;
+  margin-left: 20px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: #68b738;
+}
+
+.cards__show {
+  position: relative;
+
+  display: block;
+
+  width: 300px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 79px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.cards__show--plus::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 125px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-plus.svg");
+}
+
+.cards__link-plus {
+  position: relative;
+  display: block;
+
+  width: 280px;
+  height: 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #444444;
+
+  background-color: #f2f2f2;
+}
+
+.cards__more {
+  display: block;
+
+  width: 280px;
+  height: 40px;
+  margin-left: 20px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+}

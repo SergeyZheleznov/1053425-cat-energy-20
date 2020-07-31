@@ -6,6 +6,7 @@
 .copyright__academy {
   margin-top: 30px;
   margin-left: 20px;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
 
@@ -25,4 +26,38 @@
   padding: 0;
   margin-top: 25px;
   margin-left: 130px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__academy {
+    width: 130px;
+    height: 20px;
+    margin-top: 60px;
+    margin-left: 64px;
+    outline: 1px solid rgb(0, 17, 255);
+  }
+
+  .copyright__picture {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .copyright {
+    background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__academy {
+    width: 130px;
+    height: 20px;
+    margin-top: 63px;
+    margin-left: 26px;
+  }
+
+  .copyright__picture {
+    margin-top: 55px;
+  }
 }

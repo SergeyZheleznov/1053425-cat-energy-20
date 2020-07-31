@@ -7,3 +7,45 @@
   margin-left: 80px;
   margin-right: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: 150px;
+    background-color: #f2f2f2;
+    outline: 1px solid red;
+  }
+
+  .page-footer__logo-footer {
+    width: 256px;
+    margin: 0;
+    padding-top: 58px;
+    padding-left: 29px;
+    outline: 1px solid rgb(0, 17, 255);
+  }
+
+  .page-footer__copyright {
+    width: 256px;
+    outline: 1px solid rgb(0, 17, 255);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    justify-content: space-between;
+  }
+
+  .page-footer__logo-footer {
+    width: 300px;
+    margin: 0;
+    padding-top: 58px;
+    padding-left: 110px;
+  }
+
+  .page-footer__copyright {
+    width: 300px;
+  }
+}

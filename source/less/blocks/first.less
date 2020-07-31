@@ -4,7 +4,6 @@
 }
 
 .first__wrap {
-  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -21,7 +20,7 @@
   line-height: 36px;
   text-align: center;
 
-  color: #ffffff;
+  color: @white;
   outline: 1px solid red;
 }
 
@@ -31,12 +30,12 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: @white;
   outline: 1px solid red;
 }
 
 
-.firt__picture {
+.first__picture {
   margin-top: 50px;
 }
 
@@ -63,5 +62,97 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .first {
+    min-height: 552px;
+  }
+
+  .first__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-left: 97px;
+    background-image: none;
+
+    outline: 1px solid rgb(255, 0, 0);
+  }
+
+  .first__title {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 60px;
+    line-height: 0.95;
+
+    color: @black;
+    outline: 1px solid #000000;
+  }
+
+  .first__make {
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: @black;
+    outline: 1px solid rgb(0, 17, 255);
+  }
+
+  .first__toggle {
+    position: absolute;
+    width: 244px;
+    height: 54px;
+    margin-top: 1px;
+    margin-left: 112px;
+  }
+
+  .first__picture {
+    width: 709px;
+    height: 600px;
+    margin-left: 29px;
+    outline: 1px solid rgb(255, 0, 43);
+  }
+
+  .first__picture img {
+    background-size: cover;
+  }
+
+  .first__choice {
+    width: 244px;
+    height: 54px;
+    margin: 0;
+    padding: 0;
+    padding-top: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .first__wrap {
+    margin-left: 190px;
+    margin-top: 123px;
+    height: 230px;
+  }
+
+  .first__title {
+    text-align: left;
+  }
+
+  .first__make {
+    margin-top: 45px;
+    padding: 0;
+  }
+
+  .first__toggle {
+    margin-left: 190px;
+  }
 }

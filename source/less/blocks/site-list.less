@@ -1,3 +1,23 @@
+.site-list__item a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.site-list__item-black a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.site-list {
+  list-style: none;
+}
+
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
@@ -5,8 +25,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    width: 440px;
+    width: 444px;
     padding: 0;
+    padding-left: 5px;
     list-style: none;
     text-decoration: none;
   }
@@ -19,9 +40,20 @@
     color: #000000;
   }
 
+  .site-list__item-black a {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
   .site-list__item {
     position: relative;
-    outline: 1px solid #000000;
+  }
+
+  .site-list__item-black {
+    position: relative;
   }
 
   .site-list__item--active::after {
@@ -30,34 +62,73 @@
     top: 30px;
     left: 1px;
     width: 60px;
-    height: 3px;
+    height: 1px;
     background-color: @green;
   }
 
-  .site-list__item--active-catalog::after {
+  .site-list__item-black--active-catalog::after {
     content: "";
     position: absolute;
     top: 30px;
     left: 1px;
     width: 154px;
-    height: 3px;
+    height: 1px;
     background-color: @green;
   }
 
-  .site-list__item--active-form::after {
+  .site-list__item-black--active-form::after {
     content: "";
     position: absolute;
     top: 30px;
     left: 1px;
     width: 153px;
-    height: 3px;
+    height: 1px;
     background-color: @green;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
-    margin-left: 130px;
+    width: 483px;
+    height: 40px;
+    margin-left: 127px;
+    margin-top: 64px;
     margin-right: 110px;
+    outline: 1px solid #000000;
+  }
+
+  .site-list__item a {
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+  }
+
+  .site-list__item-black a {
+    font-size: 20px;
+    line-height: 30px;
+    color: @black;
+  }
+
+  .site-list__item {
+    display: block;
+    height: 35px;
+    outline: 1px solid #e20f0f;
+  }
+
+  .site-list__item--active::after {
+    width: 69px;
+    background-color: @white;
+  }
+
+  .site-list__item-black--active-catalog::after {
+    content: "";
+    width: 170px;
+    background-color: @green;
+  }
+
+  .site-list__item-black--active-form::after {
+    content: "";
+    width: 171px;
+    background-color: @green;
   }
 }

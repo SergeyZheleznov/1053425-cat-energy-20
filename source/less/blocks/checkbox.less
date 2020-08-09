@@ -1,0 +1,414 @@
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+  font-weight: 700;
+  border: none;
+}
+
+.checkbox__wrap-wrap {
+  width: auto;
+  margin: 0;
+  padding: 32px 20px 0 26px;
+}
+
+.checkbox__title {
+  position: relative;
+  width: 318px;
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.checkbox__title--greenline::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 163px;
+  width: 138px;
+  height: 3px;
+  background-color: @green;
+}
+
+.checkbox__wrap {
+  display: block;
+  height: 42px;
+  margin-left: 30px;
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  margin-bottom: 21px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #000000;
+}
+
+.checkbox__label--quadrate::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -36px;
+  display: block;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+/*
+.checkbox__label--quadrate:hover::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -7px;
+  display: block;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  background-color: #e5e5e5;
+  border-radius: 4px;
+}
+
+.checkbox__label--quadrate:focus::before,
+.checkbox__label--quadrate:active::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -7px;
+  display: block;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  background-color: #d5d5d5;
+  border-radius: 4px;
+}
+*/
+/* когда у нашего инпута состояние чект, то есть стоит галочка,
+то у нас должна быть картинка с галочкой */
+
+.checkbox__input:checked + .checkbox__label--quadrate::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -30px;
+  z-index: 10;
+
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-tick.svg");
+}
+/*
+.checkbox__input:checked + .checkbox__label--quadrate:focus::after,
+.checkbox__input:checked + .checkbox__label--quadrate:active::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  z-index: 10;
+
+  display: block;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-tickop03.svg");
+  opacity: 0.3;
+}
+/*
+@media (min-width: @tablet-width) {
+  .checkbox {
+    order: 4;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  .checkbox__wrap-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 764px;
+    padding: 55px 1px 1px 162px;
+    border: none;
+  }
+
+  .checkbox__title {
+    width: 766px;
+    margin: 0;
+    padding: 0;
+    font-size: @large-font;
+    text-align: center;
+  }
+
+  .checkbox__wrap-wrap--borders::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -26px;
+    left: 60px;
+    width: 125px;
+    height: 1px;
+    background-color: rgba(1, 1, 1, 0.1);
+  }
+
+  .checkbox__wrap-wrap::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -26px;
+    left: 581px;
+    width: 125px;
+    height: 1px;
+    background-color: rgba(1, 1, 1, 0.1);
+  }
+
+  .checkbox__wrap {
+    display: block;
+    width: 257px;
+    height: 86px;
+    margin: 0;
+  }
+
+  .checkbox__input {
+    display: block;
+    width: 220px;
+    margin-bottom: 21px;
+    padding-left: 73px;
+  }
+
+  .checkbox__label {
+    position: relative;
+    display: block;
+    width: 220px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox {
+    width: auto;
+    margin-top: 39px;
+  }
+
+  .checkbox__title {
+    width: 1197px;
+    padding-left: 3px;
+    text-align: center;
+  }
+
+  .checkbox__wrap-wrap {
+    position: relative;
+    justify-content: flex-start;
+    width: 1198px;
+    padding: 58px 1px 20px 125px;
+  }
+
+  .checkbox__wrap-wrap--borders::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -24px;
+    left: 120px;
+    width: 276px;
+    height: 1px;
+  }
+
+  .checkbox__wrap-wrap--borders::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -24px;
+    left: 800px;
+    width: 276px;
+    height: 1px;
+    background-color: rgba(1, 1, 1, 0.1);
+  }
+
+
+  .checkbox__wrap {
+    display: block;
+    width: 235.5px;
+    height: 86px;
+    margin: 0;
+  }
+
+  .checkbox__input {
+    display: block;
+    width: auto;
+    margin-bottom: 21px;
+  }
+
+  .checkbox__label {
+    position: relative;
+    display: block;
+    width: 123px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .checkbox__label1 {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-left: 74px;
+  }
+
+  .checkbox__label2 {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding-left: 97px;
+  }
+
+  .checkbox__label2--quadrate2:hover::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 15px;
+  }
+
+  .checkbox__label2--quadrate2:focus::before,
+  .checkbox__label2--quadrate2:active::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 15px;
+  }
+
+  .checkbox__input:checked + .checkbox__label2--quadrate2:focus::after,
+  .checkbox__input:checked + .checkbox__label2--quadrate2:active::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 33px;
+  }
+
+  .checkbox__label3--quadrate3:hover::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__label3--quadrate3:focus::before,
+  .checkbox__label3--quadrate3:active::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__input:checked + .checkbox__label3--quadrate3:focus::after,
+  .checkbox__input:checked + .checkbox__label3--quadrate3:active::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 55px;
+  }
+
+  .checkbox__label4--quadrate4:hover::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__label4--quadrate4:focus::before,
+  .checkbox__label4--quadrate4:active::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__input:checked + .checkbox__label4--quadrate4:focus::after,
+  .checkbox__input:checked + .checkbox__label4--quadrate4:active::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 57px;
+  }
+
+  .checkbox__label3 {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding-left: 120px;
+  }
+
+  .checkbox__label4 {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    margin: 0;
+    padding-left: 118px;
+  }
+
+  .checkbox__label2--quadrate2::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 15px;
+    display: block;
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    background-color: @gray;
+    border-radius: 4px;
+  }
+
+  .checkbox__input:checked + .checkbox__label2--quadrate2::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 32px;
+  }
+
+  .checkbox__label3--quadrate3::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__input:checked + .checkbox__label3--quadrate3::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 57px;
+  }
+
+  .checkbox__label4--quadrate4::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 37px;
+  }
+
+  .checkbox__input:checked + .checkbox__label4--quadrate4::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 57px;
+  }
+}
+
+*/

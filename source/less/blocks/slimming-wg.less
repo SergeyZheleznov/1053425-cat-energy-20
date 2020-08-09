@@ -3,13 +3,14 @@
   width: 280px;
   height: 266px;
   margin-left: 20px;
-
+  margin-bottom: 20px;
   background-color: #f2f2f2;
 }
 
 .slimming-wg__title {
-  margin-top: 30px;
-  margin-left: 91px;
+  margin: 0;
+  padding-left: 91px;
+  padding-top: 29px;
   font-size: 24px;
   line-height: 36px;
   text-transform: uppercase;
@@ -18,7 +19,7 @@
 .slimming-wg__card--panter-picture::after {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 21px;
   left: 29px;
   width: 36px;
   height: 50px;
@@ -34,7 +35,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #68b738;
+  background-color: @green;
 }
 
 .slimming-wg__card--tiger-picture::after {
@@ -43,7 +44,7 @@
   top: 35px;
   left: 12px;
   width: 67px;
-  height: 28px;
+  height: 33px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-cat-pro.svg");
 }
@@ -61,37 +62,208 @@
 
 .slimming-wg__text-question {
   position: relative;
+  width: 240px;
+  height: 113px;
   margin-top: 29px;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 2px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: left;
-
   color: #444444;
+}
+
+.slimming-wg__text-question--line::after {
+  content: "";
+  position: absolute;
+  top: 113px;
+  left: -1px;
+  width: 240px;
+  height: 1px;
+  background-color: #d9d9d9;
 }
 
 .slimming-wg__link {
   position: relative;
-
-  margin-top: 32px;
   margin-left: 19px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-
   color: #000000;
 }
 
 .slimming-wg__link--arrow::after {
   content: "";
   position: absolute;
-  top: -1px;
-  left: 121px;
-  width: 36.02px;
-  height: 50px;
+  top: 6px;
+  left: 100px;
+  width: 24px;
+  height: 12px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-right-arrow-long.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .slimming-wg {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slimming-wg__card {
+    width: 708px;
+    min-height: 372px;
+    margin: 0;
+    margin-left: 30px;
+    padding-top: 45px;
+    padding-left: 23px;
+    margin-bottom: 30px;
+  }
+
+  .slimming-wg__title {
+    margin-top: 32px;
+    margin-left: 30px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .slimming-wg__text-question {
+    position: relative;
+    width: 380px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 43px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+
+    color: @black;
+  }
+
+  .slimming-wg__link {
+    position: relative;
+
+    margin-left: 28px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .slimming-wg__card--tiger-picture::before {
+    content: "";
+    top: 92px;
+    left: 446px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .slimming-wg__card--tiger-picture::after {
+    content: "";
+    position: absolute;
+    top: 135px;
+    left: 412px;
+    width: 268px;
+    height: 113px;
+  }
+
+  .slimming-wg__card--panter-picture::after {
+    content: "";
+    position: absolute;
+    top: 81px;
+    left: 476px;
+    width: 140px;
+    height: 192px;
+  }
+
+  .slimming-wg__card--panter-picture::before {
+    content: "";
+    position: absolute;
+    top: 92px;
+    left: 446px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slimming-wg {
+    display: grid;
+    margin-left: 110px;
+    padding: 0;
+    gap: 80px;
+    grid-template-columns: 571px 571px;
+    outline: 1px solid rgb(0, 17, 255);
+  }
+
+  .slimming-wg__card {
+    width: 570px;
+    min-height: 374px;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid rgb(255, 0, 64);
+  }
+
+  .slimming-wg__title {
+    margin-top: 77px;
+    margin-left: 215px;
+    font-size: 36px;
+    line-height: 36px;
+    outline: 1px solid rgb(255, 0, 64);
+  }
+
+  .slimming-wg__text-question {
+    position: relative;
+    width: 470px;
+    height: 80px;
+    margin-top: 73px;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 19px;
+  }
+
+  .slimming-wg__link {
+    position: relative;
+    margin-left: 50px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .slimming-wg__card--panter-picture::after {
+    content: "";
+    position: absolute;
+    top: 41px;
+    left: 67px;
+    width: 70px;
+    height: 97px;
+  }
+
+  .slimming-wg__card--panter-picture::before {
+    content: "";
+    position: absolute;
+    top: 47px;
+    left: 52px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .slimming-wg__card--tiger-picture::after {
+    content: "";
+    position: absolute;
+    top: 67px;
+    left: 33px;
+    width: 134px;
+    height: 56px;
+  }
+
+  .slimming-wg__card--tiger-picture::before {
+    content: "";
+    top: 47px;
+    left: 52px;
+    width: 100px;
+    height: 100px;
+  }
 }

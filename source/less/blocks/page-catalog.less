@@ -4,7 +4,6 @@
   padding: 0;
   margin-top: 26px;
 
-  padding-left: 20px;
   padding-bottom: 40px;
 
   font-size: 36px;
@@ -12,4 +11,25 @@
   text-align: center;
 
   border-bottom: 1px solid #ebebeb;
+}
+
+@media (min-width: @tablet-width) {
+  .page-catalog__text {
+    width: auto;
+    margin-top: 75px;
+    margin-left: 8px;
+    margin-bottom: 125px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-catalog__text {
+    margin-top: 88px;
+    margin-left: 88px;
+    margin-bottom: 125px;
+  }
 }

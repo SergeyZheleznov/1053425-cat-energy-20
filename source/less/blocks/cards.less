@@ -6,7 +6,6 @@
 .cards__list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -14,12 +13,24 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   width: 320px;
   height: 209px;
-
-
   border-bottom: 1px solid #ebebeb;
+}
+
+.cards__item-img-container {
+  display: block;
+  width: 100px;
+  height: 123px;
+  margin-left: 20px;
+  outline: 1px solid red;
+}
+
+.cards__item-info-container {
+  display: block;
+  width: 140px;
+  height: 123px;
+  outline: 1px solid red;
 }
 
 .cards__link-item {
@@ -27,21 +38,55 @@
 }
 
 .cards__item-name {
+  width: 76px;
+  height: 41px;
+  margin-top: 21px;
+  margin-bottom: 11px;
   font-size: 16px;
   line-height: 20px;
 
   text-transform: uppercase;
   text-align: left;
   color: #222222;
+  outline: 1px solid red;
 }
 
 .cards__table {
+  width: 140px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
 
   text-align: left;
   color: #444444;
+
+  outline: 1px solid red;
+}
+
+.cards__table-row {
+  margin: 0;
+  padding: 0;
+}
+
+.cards__cell {
+  width: 70px;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  outline: 1px solid rgb(47, 0, 255);
+}
+
+.cards__cell-right {
+  width: 69px;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  outline: 1px solid rgb(47, 0, 255);
 }
 
 .cards__link {
@@ -51,27 +96,33 @@
   height: 40px;
   margin-left: 20px;
 
-  font-family: "Arial", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: @white;
 
-  background-color: #68b738;
+  background-color: @green;
+}
+
+.cards__item-plus {
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 209px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .cards__show {
-  position: relative;
-
   display: block;
-
   width: 300px;
   height: 20px;
   margin: 0;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 79px;
 
   font-size: 16px;
@@ -85,12 +136,27 @@
 .cards__show--plus::before {
   content: "";
   position: absolute;
-  top: -50px;
-  left: 125px;
+  top: 26px;
+  left: 143px;
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
-  background-image: url("../img/icon-plus.svg");
+  background-image: url("../img/icon-plus-mobile.svg");
+}
+
+.cards__more {
+  display: block;
+
+  width: 280px;
+  height: 10px;
+  padding-top: 1px;
+  margin-left: 20px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #444444;
 }
 
 .cards__link-plus {
@@ -99,10 +165,12 @@
 
   width: 280px;
   height: 40px;
+  margin: 0;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-top: 23px;
+  margin-bottom: 20px;
 
-  font-family: "Arial", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 40px;
   text-align: center;
@@ -113,16 +181,201 @@
   background-color: #f2f2f2;
 }
 
-.cards__more {
-  display: block;
+@media (min-width: @tablet-width) {
+  .cards__list {
+    display: grid;
+    column-gap: 60px;
+    row-gap: 140px;
+    grid-template-columns: 324px 324px;
+    grid-template-rows: 430px 430px 430px 430px;
+    margin-left: 31px;
+  }
 
-  width: 280px;
-  height: 40px;
-  margin-left: 20px;
+  .cards__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  color: #444444;
+    width: 324px;
+    min-height: 430px;
+
+    background-color: #f2f2f2;
+
+    border: none;
+  }
+
+  .cards__item-info-container {
+    margin: 0;
+    padding: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .cards__item-name {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 24px;
+
+    text-align: center;
+  }
+
+  .cards__table {
+    width: 247px;
+    font-size: 16px;
+    line-height: 16px;
+
+    text-align: left;
+  }
+
+  .cards__cell {
+    width: 123px;
+    height: 30px;
+    text-align: left;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .cards__cell-left {
+    width: 123px;
+    height: 30px;
+    text-align: right;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .cards__link {
+    width: 248px;
+    height: 39px;
+    margin-left: 39px;
+    margin-top: 43px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    line-height: 39px;
+  }
+
+  .cards__item-plus {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 324px;
+    min-height: 430px;
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
+  }
+
+  .cards__show {
+    position: relative;
+    display: block;
+
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    margin-left: 90px;
+    margin-top: 161px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .cards__show--plus::before {
+    content: "";
+    position: absolute;
+    top: -91px;
+    left: 57px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-plus.svg");
+  }
+
+  .cards__more {
+    width: 168px;
+    margin-left: 79px;
+    padding-top: 33px;
+    padding-bottom: 84px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .cards__link-plus {
+    width: 249px;
+    height: 40px;
+    margin-top: 22px;
+    margin-left: 36px;
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cards__list {
+    display: grid;
+    column-gap: 80px;
+    row-gap: 143px;
+    grid-template-columns: 245px 245px 245px 245px;
+    grid-template-rows: 430px 430px;
+    margin-left: 110px;
+  }
+
+  .cards__item {
+    width: 245px;
+  }
+
+  .cards__item-name {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 24px;
+
+    text-align: center;
+  }
+
+  .cards__table {
+    width: 166px;
+    font-size: 16px;
+    line-height: 16px;
+
+    text-align: left;
+  }
+
+  .cards__cell {
+    width: 83px;
+    text-align: left;
+  }
+
+  .cards__cell-left {
+    width: 83px;
+    text-align: right;
+  }
+
+  .cards__link {
+    width: 168px;
+    height: 40px;
+    margin-left: 39px;
+    margin-top: 33px;
+  }
+
+  .cards__item-plus {
+    width: 245px;
+  }
+
+  .cards__show {
+    margin-left: 50px;
+  }
+
+  .cards__more {
+    margin-left: 39px;
+  }
+
+  .cards__link-plus {
+    width: 169px;
+    margin-left: 38px;
+    margin-bottom: 18px;
+  }
 }

@@ -43,40 +43,42 @@
 
           <form class="form-content" action="https://echo.htmlacademy.ru" method="POST">
 
-            <fieldset class="customer customer__borders">
-              <div class="customer__wrap-wrap">
-                <div class="customer__name">
-                  <label class="customer__name-letter" for="customer-name-id">Имя:<sup>*</sup></label>
-                  <input class="customer__name-holder" type="text" name="customer-name" id="customer-name-id" placeholder="Барсик" required="">
+            <div class="form-content__wrap">
+              <fieldset class="customer customer__borders">
+                <div class="customer__wrap-wrap">
+                  <div class="customer__name">
+                    <label class="customer__name-letter" for="customer-name-id">Имя:<sup>*</sup></label>
+                    <input class="customer__name-holder" type="text" name="customer-name" id="customer-name-id" placeholder="Барсик" required="">
+                  </div>
+                  <div class="customer__weight">
+                    <label class="customer__weight-letter" for="customer-weight-id">вес (кг):<sup>*</sup></label>
+                    <input class="customer__weight-holder" type="text" name="customer-weight" id="customer-weight-id" placeholder="7" required="">
+                  </div>
+                  <div class="customer__old">
+                    <label class="customer__old-letter" for="customer-old-id">Возраст (лет):</label>
+                    <input class="customer__old-holder" type="text" name="customer-old" id="customer-old-id" placeholder="7">
+                  </div>
                 </div>
-                <div class="customer__weight">
-                  <label class="customer__weight-letter" for="customer-weight-id">вес (кг):<sup>*</sup></label>
-                  <input class="customer__weight-holder" type="text" name="customer-weight" id="customer-weight-id" placeholder="7" required="">
-                </div>
-                <div class="customer__old">
-                  <label class="customer__old-letter" for="customer-old-id">Возраст (лет):</label>
-                  <input class="customer__old-holder" type="text" name="customer-old" id="customer-old-id" placeholder=7>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <fieldset class="radio radio--borders">
-              <legend class="visually-hidden">Цель</legend>
-              <div class="radio__wrap-wrap radio__wrap-wrap--borders">
-                <div class="radio__wrap">
-                  <input class="radio__input visually-hidden" type="radio" name="opinion" value="plus" id="form-one" checked="">
-                  <label class="radio__label radio__label--circle" for="form-one">Похудение</label>
+              <fieldset class="radio radio--borders">
+                <legend class="visually-hidden">Цель</legend>
+                <div class="radio__wrap-wrap radio__wrap-wrap--borders">
+                  <div class="radio__wrap">
+                    <input class="radio__input visually-hidden" type="radio" name="opinion" value="plus" id="form-one" checked="">
+                    <label class="radio__label radio__label--circle" for="form-one">Похудение</label>
+                  </div>
+                  <div class="radio__wrap">
+                    <input class="radio__input visually-hidden" type="radio" name="opinion" value="minus" id="form-two">
+                    <label class="radio__label radio__label--circle" for="form-two">Набор массы</label>
+                  </div>
+                  <div class="radio__wrap">
+                    <input class="radio__input visually-hidden" type="radio" name="opinion" value="so-so" id="form-three">
+                    <label class="radio__label radio__label--circle" for="form-three">Не знаю (нужен Ваш ответ)</label>
+                  </div>
                 </div>
-                <div class="radio__wrap">
-                  <input class="radio__input visually-hidden" type="radio" name="opinion" value="minus" id="form-two">
-                  <label class="radio__label radio__label--circle" for="form-two">Набор массы</label>
-                </div>
-                <div class="radio__wrap">
-                  <input class="radio__input visually-hidden" type="radio" name="opinion" value="so-so" id="form-three">
-                  <label class="radio__label radio__label--circle" for="form-three">Не знаю(нужен Ваш ответ)</label>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
 
             <fieldset class="contacts">
               <legend class="contacts__title contacts__title--line">Контактные данные (владельца кота)</legend>
@@ -101,21 +103,21 @@
             </fieldset>
 
             <fieldset class="checkbox">
-              <legend class="checkbox__title checkbox__title--greenlines">Дополнительно</legend>
+              <legend class="checkbox__title checkbox__title--greenline">Дополнительно</legend>
               <div class="checkbox__wrap-wrap checkbox__wrap-wrap--borders">
-                <div class="checkbox__wrap">
+                <div class="checkbox__wrap1">
                   <input class="checkbox__input visually-hidden" type="checkbox" name="check-one" id="one" checked="">
                   <label class="checkbox__label checkbox__label--quadrate checkbox__label1 checkbox__label1--quadrate1" for="one">Сахарозаменитель</label>
                 </div>
-                <div class="checkbox__wrap">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="check-two" id="two" checked="">
+                <div class="checkbox__wrap2">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="check-two" id="two">
                   <label class="checkbox__label checkbox__label--quadrate checkbox__label2 checkbox__label2--quadrate2" for="two">Питьевая вода</label>
                 </div>
-                <div class="checkbox__wrap">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="check-three" id="three" checked="">
+                <div class="checkbox__wrap3">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="check-three" id="three">
                   <label class="checkbox__label checkbox__label--quadrate checkbox__label3 checkbox__label3--quadrate3" for="three">Молоко</label>
                 </div>
-                <div class="checkbox__wrap">
+                <div class="checkbox__wrap4">
                   <input class="checkbox__input visually-hidden" type="checkbox" name="chech-four" id="four">
                   <label class="checkbox__label checkbox__label--quadrate checkbox__label4 checkbox__label4--quadrate4" for="four">Витамины</label>
                 </div>
@@ -131,12 +133,14 @@
         </section>
       </main>
     </div>
-
     <footer class="page-footer">
-      <section class="map">
+      <section class="map map-form">
         <div class="map__welcome">
           <h2 class="map__welcome-text">Приглашаем к&nbsp;сотрудничеству дилеров</h2>
-          <p class="map__welcome-address"> ул. Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+          <div class="map__welcome-wrap">
+            <p class="map__welcome-address"> ул. Большая Конюшенная, д. 19/8</p>
+            <p class="map__welcome-metropolis">Санкт-Петербург</p>
+          </div>
         </div>
         <h2 class="visually-hidden">Часть страницы с картой</h2>
         <div class="map__position">

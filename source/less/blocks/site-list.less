@@ -14,6 +14,14 @@
   color: #000000;
 }
 
+.site-list__item-black-catalog a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .site-list {
   list-style: none;
 }
@@ -48,6 +56,14 @@
     color: #000000;
   }
 
+  .site-list__item-black-catalog a {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
   .site-list__item {
     position: relative;
   }
@@ -56,23 +72,28 @@
     position: relative;
   }
 
+  .site-list__item-black-catalog {
+    position: relative;
+    padding-right: 5px;
+  }
+
   .site-list__item--active::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 32px;
     left: 1px;
-    width: 60px;
-    height: 1px;
+    width: 62px;
+    height: 2px;
     background-color: @green;
   }
 
-  .site-list__item-black--active-catalog::after {
+  .site-list__item-black-catalog--active-catalog::after {
     content: "";
     position: absolute;
     top: 30px;
     left: 1px;
-    width: 154px;
-    height: 1px;
+    width: 152px;
+    height: 2px;
     background-color: @green;
   }
 
@@ -82,7 +103,7 @@
     top: 30px;
     left: 1px;
     width: 153px;
-    height: 1px;
+    height: 2px;
     background-color: @green;
   }
 }
@@ -92,9 +113,8 @@
     width: 483px;
     height: 40px;
     margin-left: 127px;
-    margin-top: 64px;
+    margin-top: 61px;
     margin-right: 110px;
-    outline: 1px solid #000000;
   }
 
   .site-list__item a {
@@ -109,25 +129,48 @@
     color: @black;
   }
 
+  .site-list__item-black-catalog a {
+    font-size: 20px;
+    line-height: 30px;
+    color: @black;
+  }
+
   .site-list__item {
     display: block;
     height: 35px;
-    outline: 1px solid #e20f0f;
+  }
+
+  .site-list__item-black {
+    position: relative;
+  }
+
+  .site-list__item-black-catalog {
+    position: relative;
+    padding-right: 1px;
   }
 
   .site-list__item--active::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 1px;
     width: 69px;
+    height: 2px;
     background-color: @white;
   }
 
-  .site-list__item-black--active-catalog::after {
+  .site-list__item-black-catalog--active-catalog::after {
     content: "";
+    top: 36px;
+    height: 2px;
     width: 170px;
     background-color: @green;
   }
 
   .site-list__item-black--active-form::after {
     content: "";
+    top: 36px;
+    height: 2px;
     width: 171px;
     background-color: @green;
   }

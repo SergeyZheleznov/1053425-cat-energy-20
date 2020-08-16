@@ -244,8 +244,13 @@
     z-index: -3;
   }
 
-  .example__background {
+  .example__all-wrap {
+    position: relative;
+  }
+
+  .example__all-wrap--background::before {
     position: absolute;
+    content: "";
     top: 620px;
     left: 1px;
     z-index: -2;
@@ -489,17 +494,8 @@
     z-index: -3;
   }
 
-  .example__background {
-    position: absolute;
-    top: 204px;
-    left: 1px;
-    z-index: -2;
-    width: 100%;
-    min-height: 461px;
-    background-color: #eaeaea;
-  }
-
   .example__all-wrap {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -509,6 +505,17 @@
     margin: 0 auto;
     padding: 0;
     outline: 1px solid rgb(255, 0, 149);
+  }
+
+  .example__all-wrap--background::before {
+    position: absolute;
+    content: "";
+    top: 204px;
+    left: 1px;
+    z-index: -2;
+    width: 100%;
+    min-height: 461px;
+    background-color: #eaeaea;
   }
 
   .example__first-part {

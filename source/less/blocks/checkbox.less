@@ -1,40 +1,65 @@
 .checkbox {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
+  position: relative;
+  width: auto;
   margin: 0;
   margin-top: 26px;
   padding: 0;
-  font-weight: 700;
   border: none;
 }
 
-.checkbox__wrap-wrap {
-  width: auto;
+.checkbox__title--line::before {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 1px;
+  z-index: 3;
+  width: 100%;
+  height: 2px;
+  background-color: @green;
+}
+
+.checkbox__title-wrap {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 32px;
   margin: 0;
-  padding: 32px 20px 0 26px;
+  padding: 0;
+  padding-right: 157px;
+  justify-content: center;
+  border: none;
+  outline: 1px solid red;
 }
 
 .checkbox__title {
-  position: relative;
-  width: 318px;
+  z-index: 10;
+  width: 197px;
+  height: 32px;
   margin: 0;
-  margin-left: 20px;
-  margin-bottom: 8px;
+  padding: 0;
+  padding-left: 37px;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 30px;
   text-align: left;
-  color: #000000;
+  outline: 1px solid rgb(0, 4, 255);
 }
 
-.checkbox__title--greenline::after {
-  content: "";
+.checkbox__back {
   position: absolute;
-  top: 14px;
-  left: 163px;
-  width: 138px;
-  height: 3px;
-  background-color: @green;
+  z-index: 10;
+  width: 197px;
+  margin-left: -37px;
+  padding-left: 37px;
+  background-color: white;
+}
+
+.checkbox__wrap-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  padding: 35px 20px 0 26px;
 }
 
 .checkbox__wrap-sugar {
@@ -55,7 +80,7 @@
   margin-left: 30px;
 }
 
-.checkbox__wrap-milk {
+.checkbox__wrap-vitamins {
   display: block;
   height: 42px;
   margin-left: 30px;
@@ -147,41 +172,55 @@
 */
 @media (min-width: @tablet-width) {
   .checkbox {
-    order: 4;
+    position: relative;
+    margin-top: 67px;
+  }
+
+  .checkbox__title--line::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 1px;
+    z-index: 3;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+  }
+
+  .checkbox__title-wrap {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 32px;
     margin: 0;
-    margin-top: 65px;
     padding: 0;
+    padding-right: 407px;
+    justify-content: center;
+    border: none;
+    outline: 1px solid red;
   }
 
   .checkbox__title {
-    position: relative;
-    width: 300px;
+    z-index: 10;
+    width: 288px;
+    height: 32px;
     margin: 0;
     padding: 0;
-    margin-left: 67px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 36px;
     text-align: left;
+    outline: 1px solid rgb(0, 4, 255);
   }
 
-  .checkbox__title--greenline::before {
-    content: "";
+  .checkbox__back {
     position: absolute;
-    top: 23px;
-    left: -70px;
-    width: 30px;
-    height: 2px;
-    background-color: @green;
-  }
-
-  .checkbox__title--greenline::after {
-    content: "";
-    position: absolute;
-    top: 23px;
-    left: 250px;
-    width: 454px;
-    height: 2px;
-    background-color: @green;
+    z-index: 10;
+    width: 288px;
+    margin-left: -37px;
+    padding-left: 37px;
+    background-color: white;
   }
 
   .checkbox__wrap-wrap {
@@ -255,7 +294,7 @@
     outline: 1px solid rgb(255, 251, 0);
   }
 
-  .checkbox__wrap-milk {
+  .checkbox__wrap-vitamins {
     display: block;
     width: 200px;
     height: 50px;
@@ -318,48 +357,62 @@
 
 @media (min-width: @desktop-width) {
   .checkbox {
-    order: 4;
-    margin: 0;
+    position: relative;
     margin-top: 69px;
+  }
+
+  .checkbox__title--line::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 1px;
+    z-index: 3;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+  }
+
+  .checkbox__title-wrap {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 32px;
+    margin: 0;
     padding: 0;
+    padding-right: 1010px;
+    justify-content: center;
+    border: none;
+    outline: 1px solid red;
   }
 
   .checkbox__title {
-    position: relative;
-    width: 300px;
+    z-index: 10;
+    width: 288px;
+    height: 32px;
     margin: 0;
     padding: 0;
-    margin-left: 109px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 36px;
     text-align: left;
+    outline: 1px solid rgb(0, 4, 255);
   }
 
-  .checkbox__title--greenline::before {
-    content: "";
+  .checkbox__back {
     position: absolute;
-    top: 22px;
-    left: -110px;
-    width: 70px;
-    height: 2px;
-    background-color: @green;
-  }
-
-  .checkbox__title--greenline::after {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 250px;
-    width: 1072px;
-    height: 2px;
-    background-color: @green;
+    z-index: 10;
+    width: 288px;
+    margin-left: -37px;
+    padding-left: 37px;
+    background-color: white;
   }
 
   .checkbox__wrap-wrap {
     position: relative;
     justify-content: flex-start;
     width: 1440px;
-    padding: 66px 1px 20px 143px;
+    padding: 73px 1px 20px 143px;
   }
 
   .checkbox__wrap-wrap--borders::before {

@@ -1,43 +1,86 @@
 .checkbox {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
+  position: relative;
+  width: auto;
   margin: 0;
   margin-top: 26px;
   padding: 0;
-  font-weight: 700;
   border: none;
 }
 
-.checkbox__wrap-wrap {
-  width: auto;
-  margin: 0;
-  padding: 32px 20px 0 26px;
-}
-
-.checkbox__title {
-  position: relative;
-  width: 318px;
-  margin: 0;
-  margin-left: 20px;
-  margin-bottom: 8px;
-  font-size: 24px;
-  line-height: 26px;
-  text-align: left;
-  color: #000000;
-}
-
-.checkbox__title--greenline::after {
-  content: "";
+.checkbox__title--line::before {
   position: absolute;
-  top: 14px;
-  left: 163px;
-  width: 138px;
-  height: 3px;
+  content: "";
+  top: 17px;
+  left: 1px;
+  z-index: 3;
+  width: 100%;
+  height: 2px;
   background-color: @green;
 }
 
-.checkbox__wrap {
+.checkbox__title-wrap {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  padding-right: 157px;
+  justify-content: center;
+  border: none;
+  outline: 1px solid red;
+}
+
+.checkbox__title {
+  z-index: 10;
+  width: 197px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+  outline: 1px solid rgb(0, 4, 255);
+}
+
+.checkbox__back {
+  position: absolute;
+  z-index: 10;
+  width: 197px;
+  margin-left: -37px;
+  padding-left: 37px;
+  background-color: white;
+}
+
+.checkbox__wrap-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  padding: 35px 20px 0 26px;
+}
+
+.checkbox__wrap-sugar {
+  display: block;
+  height: 42px;
+  margin-left: 30px;
+}
+
+.checkbox__wrap-water {
+  display: block;
+  height: 42px;
+  margin-left: 30px;
+}
+
+.checkbox__wrap-milk {
+  display: block;
+  height: 42px;
+  margin-left: 30px;
+}
+
+.checkbox__wrap-vitamins {
   display: block;
   height: 42px;
   margin-left: 30px;
@@ -55,6 +98,11 @@
   color: #000000;
 }
 
+.checkbox__label:active,
+.checkbox__label:focus {
+  opacity: 0.3;
+}
+
 .checkbox__label--quadrate::before {
   content: "";
   position: absolute;
@@ -66,34 +114,17 @@
   height: 30px;
   border: 1px solid #cdcdcd;
 }
-/*
+
 .checkbox__label--quadrate:hover::before {
-  content: "";
-  position: absolute;
-  top: -13px;
-  left: -7px;
-  display: block;
-  z-index: 10;
-  width: 56px;
-  height: 56px;
-  background-color: #e5e5e5;
-  border-radius: 4px;
+  border: 1px solid #bababa;
 }
 
-.checkbox__label--quadrate:focus::before,
-.checkbox__label--quadrate:active::before {
-  content: "";
-  position: absolute;
-  top: -13px;
-  left: -7px;
-  display: block;
-  z-index: 10;
-  width: 56px;
-  height: 56px;
-  background-color: #d5d5d5;
-  border-radius: 4px;
+.checkbox__label--quadrate:active::before,
+.checkbox__label--quadrate:focus::before {
+  border: 1px solid #bababa;
+  opacity: 0.3;
 }
-*/
+
 /* когда у нашего инпута состояние чект, то есть стоит галочка,
 то у нас должна быть картинка с галочкой */
 
@@ -126,13 +157,58 @@
   background-image: url("../img/icon-tickop03.svg");
   opacity: 0.3;
 }
-/*
+*/
 @media (min-width: @tablet-width) {
   .checkbox {
-    order: 4;
+    position: relative;
+    margin-top: 67px;
+  }
+
+  .checkbox__title--line::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 1px;
+    z-index: 3;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+  }
+
+  .checkbox__title-wrap {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 32px;
     margin: 0;
-    margin-top: 30px;
     padding: 0;
+    padding-right: 407px;
+    justify-content: center;
+    border: none;
+    outline: 1px solid red;
+  }
+
+  .checkbox__title {
+    z-index: 10;
+    width: 288px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: left;
+    outline: 1px solid rgb(0, 4, 255);
+  }
+
+  .checkbox__back {
+    position: absolute;
+    z-index: 10;
+    width: 288px;
+    margin-left: -37px;
+    padding-left: 37px;
+    background-color: white;
   }
 
   .checkbox__wrap-wrap {
@@ -142,16 +218,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 764px;
-    padding: 55px 1px 1px 162px;
-    border: none;
-  }
-
-  .checkbox__title {
-    width: 766px;
-    margin: 0;
     padding: 0;
-    font-size: @large-font;
-    text-align: center;
+    padding-top: 68px;
+    padding-left: 105px;
+
+    border: none;
+    outline: 1px solid red;
   }
 
   .checkbox__wrap-wrap--borders::before {
@@ -163,6 +235,7 @@
     width: 125px;
     height: 1px;
     background-color: rgba(1, 1, 1, 0.1);
+    border: none;
   }
 
   .checkbox__wrap-wrap::after {
@@ -174,13 +247,49 @@
     width: 125px;
     height: 1px;
     background-color: rgba(1, 1, 1, 0.1);
+    border: none;
   }
 
-  .checkbox__wrap {
+  .checkbox__wrap-sugar {
     display: block;
-    width: 257px;
-    height: 86px;
+    width: 210px;
+    height: 50px;
     margin: 0;
+    margin-bottom: 21px;
+    margin-right: 132px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-water {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-milk {
+    display: block;
+    width: 210px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    margin-right: 132px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-vitamins {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
   }
 
   .checkbox__input {
@@ -188,33 +297,110 @@
     width: 220px;
     margin-bottom: 21px;
     padding-left: 73px;
+    outline: 1px solid rgb(0, 255, 98);
   }
 
   .checkbox__label {
     position: relative;
     display: block;
-    width: 220px;
+    width: 170px;
     margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    outline: 1px solid rgb(17, 0, 255);
+  }
+
+  .checkbox__label--quadrate::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -60px;
+    display: block;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cdcdcd;
+  }
+
+  /* когда у нашего инпута состояние чект, то есть стоит галочка,
+то у нас должна быть картинка с галочкой */
+
+  .checkbox__input:checked + .checkbox__label--quadrate::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -49px;
+    z-index: 10;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-tick.svg");
   }
 }
 
 @media (min-width: @desktop-width) {
   .checkbox {
-    width: auto;
-    margin-top: 39px;
+    position: relative;
+    margin-top: 69px;
+  }
+
+  .checkbox__title--line::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 1px;
+    z-index: 3;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+  }
+
+  .checkbox__title-wrap {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    padding-right: 1010px;
+    justify-content: center;
+    border: none;
+    outline: 1px solid red;
   }
 
   .checkbox__title {
-    width: 1197px;
-    padding-left: 3px;
-    text-align: center;
+    z-index: 10;
+    width: 288px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: left;
+    outline: 1px solid rgb(0, 4, 255);
+  }
+
+  .checkbox__back {
+    position: absolute;
+    z-index: 10;
+    width: 288px;
+    margin-left: -37px;
+    padding-left: 37px;
+    background-color: white;
   }
 
   .checkbox__wrap-wrap {
     position: relative;
     justify-content: flex-start;
-    width: 1198px;
-    padding: 58px 1px 20px 125px;
+    width: 1440px;
+    padding: 73px 1px 20px 143px;
   }
 
   .checkbox__wrap-wrap--borders::before {
@@ -225,6 +411,7 @@
     left: 120px;
     width: 276px;
     height: 1px;
+    border: none;
   }
 
   .checkbox__wrap-wrap--borders::after {
@@ -236,8 +423,74 @@
     width: 276px;
     height: 1px;
     background-color: rgba(1, 1, 1, 0.1);
+    border: none;
   }
 
+  .checkbox__wrap-sugar {
+    display: block;
+    width: 210px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    margin-right: 115px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-water {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    margin-right: 125px;
+    margin-bottom: 21px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-milk {
+    display: block;
+    width: 210px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    margin-right: 115px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__wrap-vitamins {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 21px;
+    padding-left: 10px;
+    outline: 1px solid rgb(255, 251, 0);
+  }
+
+  .checkbox__input {
+    display: block;
+    width: 220px;
+    margin-bottom: 21px;
+    padding-left: 73px;
+    outline: 1px solid rgb(0, 255, 98);
+  }
+
+  .checkbox__label {
+    position: relative;
+    display: block;
+    width: 170px;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    outline: 1px solid rgb(17, 0, 255);
+  }
+}
+/*
 
   .checkbox__wrap {
     display: block;
@@ -410,5 +663,4 @@
     left: 57px;
   }
 }
-
 */

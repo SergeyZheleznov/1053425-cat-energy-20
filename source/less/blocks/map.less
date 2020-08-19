@@ -1,9 +1,16 @@
 .map {
+  position: relative;
   display: block;
   width: auto;
   min-height: 476px;
   margin: 0;
   background-color: @white;
+}
+
+.map__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .map__welcome {
@@ -13,7 +20,7 @@
   width: 280px;
   margin: 0 auto;
   min-height: 114px;
-  padding-top: 15px;
+  padding-top: 11px;
   padding-bottom: 1px;
 }
 
@@ -21,17 +28,44 @@
   display: block;
   width: 140px;
   height: 64px;
+  margin-top: 15px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   outline: 1px solid red;
 }
 
+.map__welcome-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 140px;
+  height: 64px;
+  margin: 0;
+  margin-top: 15px;
+  outline: 1px solid rgb(0, 26, 255);
+}
+
 .map__welcome-address {
   display: block;
   font-family: "Arial", sans-serif;
-  width: 140px;
-  height: 64px;
+  width: 139px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  outline: 1px solid red;
+}
+
+.map__welcome-metropolis {
+  display: block;
+  font-family: "Arial", sans-serif;
+  width: 139px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
@@ -51,6 +85,10 @@
   background-image: url("../img/bg-map-mobile@1x.png");
 }
 
+.map__interactive {
+  height: 362px;
+}
+
 .map__marker {
   position: absolute;
   top: 139px;
@@ -64,18 +102,19 @@
 
 @media (min-width: @tablet-width) {
   .map {
-    min-height: 601px;
+    min-height: 580px;
     background-color: @white;
   }
 
+  .map__container {
+    width: 768px;
+  }
+
   .map__welcome {
-    width: 626px;
-    height: 201px;
-    padding-left: 71px;
-    padding-right: 71px;
-    padding-top: 66px;
+    width: 630px;
+    height: 191px;
+    padding-top: 43px;
     justify-content: space-between;
-    background-color: @white;
     outline: 1px solid rgb(0, 26, 255);
   }
 
@@ -84,17 +123,45 @@
     width: 175px;
     height: 85px;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
     text-align: left;
     text-transform: uppercase;
     outline: 1px solid red;
+  }
+
+  .map__welcome-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 162px;
+    height: 79px;
+    margin: 0;
+    margin-top: 15px;
+    margin-right: 2px;
+    outline: 1px solid rgb(0, 26, 255);
   }
 
   .map__welcome-address {
     display: block;
     font-family: "Arial", sans-serif;
     width: 160px;
-    height: 80px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #444444;
+    outline: 1px solid red;
+  }
+
+  .map__welcome-metropolis {
+    display: block;
+    font-family: "Arial", sans-serif;
+    width: 140px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
@@ -124,6 +191,11 @@
     min-height: 400px;
   }
 
+  .map__container {
+    position: relative;
+    width: 1440px;
+  }
+
   .map__welcome {
     position: absolute;
     top: 95px;
@@ -131,10 +203,34 @@
     width: 570px;
     height: 201px;
     z-index: 10;
+    background-color: @white;
+  }
+
+  .map__welcome-text {
+    margin-left: 75px;
+    margin-top: 23px;
   }
 
   .map__position {
     position: relative;
     background-image: url("../img/bg-map-desktop@1x.png");
+  }
+
+  .map__interactive {
+    height: 400px;
+  }
+
+  .map__welcome-wrap {
+    margin-right: 85px;
+    margin-top: 23px;
+  }
+
+  .map__welcome-address {
+    text-align: left;
+  }
+
+  .map__welcome-metropolis {
+    width: 160px;
+    text-align: left;
   }
 }

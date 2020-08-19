@@ -98,6 +98,11 @@
   color: #000000;
 }
 
+.checkbox__label:active,
+.checkbox__label:focus {
+  opacity: 0.3;
+}
+
 .checkbox__label--quadrate::before {
   content: "";
   position: absolute;
@@ -109,34 +114,17 @@
   height: 30px;
   border: 1px solid #cdcdcd;
 }
-/*
+
 .checkbox__label--quadrate:hover::before {
-  content: "";
-  position: absolute;
-  top: -13px;
-  left: -7px;
-  display: block;
-  z-index: 10;
-  width: 56px;
-  height: 56px;
-  background-color: #e5e5e5;
-  border-radius: 4px;
+  border: 1px solid #bababa;
 }
 
-.checkbox__label--quadrate:focus::before,
-.checkbox__label--quadrate:active::before {
-  content: "";
-  position: absolute;
-  top: -13px;
-  left: -7px;
-  display: block;
-  z-index: 10;
-  width: 56px;
-  height: 56px;
-  background-color: #d5d5d5;
-  border-radius: 4px;
+.checkbox__label--quadrate:active::before,
+.checkbox__label--quadrate:focus::before {
+  border: 1px solid #bababa;
+  opacity: 0.3;
 }
-*/
+
 /* когда у нашего инпута состояние чект, то есть стоит галочка,
 то у нас должна быть картинка с галочкой */
 

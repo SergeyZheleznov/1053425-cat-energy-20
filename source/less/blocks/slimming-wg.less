@@ -120,6 +120,11 @@
   color: #000000;
 }
 
+.slimming-wg__link:active,
+.slimming-wg__link:focus {
+  opacity: 0.3;
+}
+
 .slimming-wg__link--arrow::after {
   content: "";
   position: absolute;
@@ -129,6 +134,20 @@
   height: 12px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-right-arrow-long.svg");
+}
+
+.slimming-wg__link--arrow:hover::after {
+  width: 30px;
+  height: 18px;
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+}
+
+.slimming-wg__link--arrow:active::after,
+.slimming-wg__link--arrow:focus::after {
+  width: 30px;
+  height: 18px;
+  opacity: 0.3;
+  background-image: url("../img/icon-right-arrow-verylong.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -210,7 +229,7 @@
     width: 24px;
     height: 12px;
     background-repeat: no-repeat;
-    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
   }
 
   .slimming-wg__card--tiger-picture::before {
@@ -310,7 +329,7 @@
     width: 24px;
     height: 12px;
     background-repeat: no-repeat;
-    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
   }
 
   .slimming-wg__card--panter-picture::after {

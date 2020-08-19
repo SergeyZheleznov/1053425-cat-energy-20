@@ -54,21 +54,13 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #e5e5e5;
+  border: 1px solid #bababa;
 }
 
 .radio__label--circle:focus::before,
 .radio__label--circle:active::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -45px;
-  display: block;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #d5d5d5;
+  opacity: 0.3;
+  border: 1px solid #bababa;
 }
 
 /* когда у нашего радио-инпута состояние чект, то есть стоит кружок,
@@ -77,8 +69,8 @@
 .radio__input:checked + .radio__label--circle::after {
   content: "";
   position: relative;
-  top: -17px;
-  left: -37px;
+  top: -4px;
+  left: -45px;
   display: block;
   z-index: 10;
   width: 13px;
@@ -86,7 +78,7 @@
   border-radius: 50%;
   background-color: @green;
 }
-
+/*
 .radio__input:checked + .radio__label--circle:focus::after,
 .radio__input:checked + .radio__label--circle:active::after {
   content: "";
@@ -100,7 +92,7 @@
   border-radius: 50%;
   background-color: #333333;
 }
-
+*/
 .radio__wrap {
   display: block;
   height: 42px;
@@ -183,7 +175,7 @@
     width: 40px;
     height: 40px;
   }
-
+/*
   .radio__input:checked + .radio__label--circle::after {
     content: "";
     position: relative;
@@ -202,6 +194,7 @@
     width: 40px;
     height: 40px;
   }
+  */
 }
 
 @media (min-width: @desktop-width) {

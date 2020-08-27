@@ -26,103 +26,29 @@
   margin: 0;
   padding: 0;
   margin-left: 20px;
-  outline: 1px solid red;
+  padding-top: 4px;
 }
 
-.cards__item-img-container--small::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: -2px;
-  z-index: -1;
-  width: 138px;
+.cards__item-img-container-big {
+  position: relative;
+  display: block;
+  width: 136px;
+  height: 126px;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  padding-top: 7px;
+}
+
+.cards__item-img-container-small {
+  position: relative;
+  display: block;
+  width: 136px;
   height: 120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/chicken-small-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--big::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -1px;
-  z-index: -1;
-  width: 140px;
-  height: 130px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/chicken-big-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--fish500::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 5px;
-  width: 125px;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/fish-small-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--fish1000::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -1px;
-  z-index: -1;
-  width: 140px;
-  height: 130px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/fish-big-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--slim500::after {
-  content: "";
-  position: absolute;
-  top: 21px;
-  left: 5px;
-  width: 125px;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/buckwheat-small-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--slim1000::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -1px;
-  z-index: -1;
-  width: 138px;
-  height: 130px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/buckwheat-big-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
-}
-
-.cards__item-img-container--rice500::after {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 1px;
-  z-index: 1;
-  width: 135px;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/rice-small-mobile@1x.jpg");
-  outline: 1px solid rgb(0, 255, 34);
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  padding-top: 15px;
 }
 
 .cards__item-info-container {
@@ -131,7 +57,6 @@
   height: 126px;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
 }
 
 .cards__link-item {
@@ -139,7 +64,7 @@
 }
 
 .cards__item-name {
-  width: 76px;
+  width: 79px;
   height: 41px;
   margin-top: 21px;
   margin-bottom: 11px;
@@ -149,7 +74,6 @@
   text-transform: uppercase;
   text-align: left;
   color: #222222;
-  outline: 1px solid red;
 }
 
 .cards__table {
@@ -160,11 +84,8 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
-
   text-align: left;
   color: #444444;
-
-  outline: 1px solid red;
 }
 
 .cards__table-row {
@@ -178,7 +99,6 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  outline: 1px solid rgb(47, 0, 255);
 }
 
 .cards__cell-right {
@@ -187,7 +107,6 @@
   margin: 0;
   padding: 0;
   text-align: right;
-  outline: 1px solid rgb(47, 0, 255);
 }
 
 .cards__link {
@@ -238,12 +157,10 @@
   padding: 0;
   margin-left: 15px;
   margin-top: 79px;
-
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-
   color: #111111;
 }
 
@@ -321,122 +238,46 @@
 
   .cards__item {
     position: relative;
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 324px;
     min-height: 430px;
+    padding-top: 125px;
     background-color: #f2f2f2;
     border: none;
   }
 
   .cards__item-img-container {
-    position: relative;
-    display: block;
-    width: 250px;
-    height: 126px;
+    position: absolute;
+    top: -46px;
+    left: -5px;
+    width: 350px;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    margin-left: 1px;
+  }
+
+  .cards__item-img-container-big {
+    position: absolute;
+    top: -70px;
+    left: -21px;
+    width: 370px;
+    height: 200px;
     margin: 0;
     padding: 0;
     margin-left: 20px;
-    outline: 1px solid red;
   }
 
-  .cards__item-img-container--small::after {
-    content: "";
+  .cards__item-img-container-small {
     position: absolute;
     top: -46px;
-    left: -22px;
-    z-index: 3;
-    width: 305px;
-    height: 172px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/chicken-small-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--big::after {
-    content: "";
-    position: absolute;
-    top: -75px;
-    left: -27px;
-    z-index: 3;
-    width: 305px;
-    height: 214px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/chicken-big-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--fish500::after {
-    content: "";
-    position: absolute;
-    top: -46px;
-    left: -22px;
-    z-index: 3;
-    width: 305px;
-    height: 173px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/fish-small-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--fish1000::after {
-    content: "";
-    position: absolute;
-    top: -75px;
-    left: -27px;
-    z-index: 3;
-    width: 305px;
-    height: 214px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/fish-big-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--slim500::after {
-    content: "";
-    position: absolute;
-    top: -46px;
-    left: -22px;
-    z-index: 3;
-    width: 305px;
-    height: 173px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/buckwheat-small-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--slim1000::after {
-    content: "";
-    position: absolute;
-    top: -75px;
-    left: -27px;
-    z-index: 3;
-    width: 305px;
-    height: 214px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/buckwheat-big-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
-  }
-
-  .cards__item-img-container--rice500::after {
-    content: "";
-    position: absolute;
-    top: -46px;
-    left: -22px;
-    z-index: 3;
-    width: 305px;
-    height: 173px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../img/rice-small-tablet@1x.png");
-    outline: 1px solid rgb(0, 255, 34);
+    left: -21px;
+    width: 350px;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
   }
 
   .cards__item-info-container {
@@ -456,7 +297,6 @@
     margin-right: auto;
     font-size: 20px;
     line-height: 24px;
-
     text-align: center;
   }
 
@@ -497,7 +337,6 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     width: 324px;
     min-height: 430px;
     background-color: #ffffff;
@@ -506,26 +345,20 @@
 
   .cards__show {
     position: relative;
-    display: block;
-
     width: 150px;
     margin: 0;
     padding: 0;
     margin-left: 90px;
     margin-top: 161px;
-
     font-size: 20px;
     line-height: 22px;
   }
 
   .cards__show--plus::before {
-    content: "";
-    position: absolute;
     top: -108px;
     left: 41px;
     width: 60px;
     height: 60px;
-    background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../img/icon-plus.svg");
   }
@@ -562,77 +395,42 @@
   }
 
   .cards__item {
+    position: relative;
     width: 245px;
     height: 431px;
   }
 
   .cards__item-img-container {
-    position: relative;
+    position: absolute;
+    top: -70px;
+    left: -21px;
     display: block;
     width: 245px;
     height: 126px;
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
   }
 
-  .cards__item-img-container--small::after {
-    content: "";
+  .cards__item-img-container-big {
     position: absolute;
-    top: -49px;
-    left: -40px;
-  }
-
-  .cards__item-img-container--big::after {
-    content: "";
-    position: absolute;
-    top: -77px;
-    left: -41px;
-    width: 322px;
-    height: 210px;
-  }
-
-  .cards__item-img-container--fish500::after {
-    content: "";
-    position: absolute;
-    top: -51px;
-    left: -40px;
-  }
-
-  .cards__item-img-container--fish1000::after {
-    content: "";
-    position: absolute;
-    top: -77px;
-    left: -41px;
-    width: 313px;
-    height: 195px;
-  }
-
-  .cards__item-img-container--slim500::after {
-    content: "";
-    position: absolute;
-    top: -46px;
-    left: -42px;
-  }
-
-  .cards__item-img-container--slim1000::after {
-    content: "";
-    position: absolute;
+    display: block;
     top: -75px;
-    left: -45px;
-    z-index: 3;
-    width: 305px;
-    height: 214px;
+    left: -1px;
+    width: 235px;
+    height: 180px;
+    margin: 0;
+    padding: 0;
   }
 
-  .cards__item-img-container--rice500::after {
-    content: "";
+  .cards__item-img-container-small {
     position: absolute;
-    top: -46px;
-    left: -42px;
-    z-index: 3;
-    width: 305px;
-    height: 173px;
+    display: block;
+    top: -53px;
+    left: 1px;
+    width: 245px;
+    height: 126px;
+    margin: 0;
+    padding: 0;
   }
 
   .cards__item-info-container {
@@ -669,6 +467,7 @@
   }
 
   .cards__link {
+    z-index: 10;
     width: 168px;
     height: 40px;
     margin-left: 39px;

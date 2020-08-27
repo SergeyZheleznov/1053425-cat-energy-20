@@ -8,8 +8,8 @@
 }
 
 .discription__title--line::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 15px;
   left: 1px;
   z-index: 3;
@@ -29,7 +29,6 @@
   padding-right: 157px;
   justify-content: center;
   border: none;
-  outline: 1px solid red;
 }
 
 .discription__title {
@@ -43,7 +42,6 @@
   line-height: 26px;
   text-align: left;
   background-color: #ffffff;
-  outline: 1px solid rgb(0, 4, 255);
 }
 
 .discription__back {
@@ -84,77 +82,29 @@
   width: 260px;
   border: none;
 }
-/*
-.discription__label {
-  position: relative;
-}
-
-.discription__text--quadrate::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  display: block;
-  z-index: 5;
-  width: 279px;
-  height: 160px;
-  background-color: rgba(1, 1, 1, 0.05);
-}
-*/
 
 @media (min-width: @tablet-width) {
   .discription {
-    position: relative;
-    width: auto;
-    margin: 0;
     margin-top: 20px;
-    padding: 0;
-    outline: 1px solid blueviolet;
   }
 
   .discription__title--line::before {
-    position: absolute;
-    content: "";
     top: 22px;
-    left: 1px;
-    z-index: 3;
-    width: 100%;
-    height: 2px;
-    background-color: @green;
   }
 
   .discription__title-wrap {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    height: 32px;
-    margin: 0;
     margin-top: 7px;
-    padding: 0;
     padding-right: 445px;
-    justify-content: center;
-    border: none;
-    outline: 1px solid red;
   }
 
   .discription__title {
-    z-index: 10;
     width: 260px;
-    height: 32px;
-    margin: 0;
-    padding: 0;
     padding-left: 40px;
     font-size: 36px;
     line-height: 36px;
-    text-align: left;
-    background-color: #ffffff;
-    outline: 1px solid rgb(0, 4, 255);
   }
 
   .discription__back {
-    position: absolute;
-    z-index: 10;
     width: 260px;
     margin-left: -37px;
     padding-left: 37px;
@@ -162,7 +112,6 @@
   }
 
   .discription__text {
-    position: relative;
     width: 629px;
     height: 172px;
     margin: 0;
@@ -174,10 +123,6 @@
     padding-left: 16px;
     font-size: 20px;
     line-height: 30px;
-    text-align: left;
-    text-transform: none;
-    color: #444444;
-    border: 1px solid #e7e7e7;
   }
 
   .discription__label {
@@ -188,89 +133,21 @@
     width: 606px;
     height: 120px;
   }
-  /*
-  .discription__text--quadrate::before {
-    content: "";
-    position: absolute;
-    top: 57px;
-    left: 60px;
-    display: block;
-    z-index: 5;
-    width: 648px;
-    height: 160px;
-    background-color: rgba(1, 1, 1, 0.05);
-  }
-
-  .discription__text--quadrate::after {
-    content: "* – обязательные поля";
-    position: absolute;
-    top: 290px;
-    left: 548px;
-    display: block;
-    z-index: 5;
-    width: 167px;
-    height: 20px;
-    font-size: @little-font;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #333333;
-  }
-  */
 }
 
 @media (min-width: @desktop-width) {
   .discription {
-    position: relative;
-    width: auto;
-    margin: 0;
     margin-top: 30px;
-    padding: 0;
-    outline: 1px solid blueviolet;
-  }
-
-  .discription__title--line::before {
-    position: absolute;
-    content: "";
-    top: 22px;
-    left: 1px;
-    z-index: 3;
-    width: 100%;
-    height: 2px;
-    background-color: @green;
   }
 
   .discription__title-wrap {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    height: 32px;
     margin: 0;
     margin-top: 7px;
     padding: 0;
     padding-right: 1043px;
-    justify-content: center;
-    border: none;
-    outline: 1px solid red;
-  }
-
-  .discription__title {
-    z-index: 10;
-    width: 260px;
-    height: 32px;
-    margin: 0;
-    padding: 0;
-    padding-left: 40px;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: left;
-    background-color: #ffffff;
-    outline: 1px solid rgb(0, 4, 255);
   }
 
   .discription__back {
-    position: absolute;
-    z-index: 10;
     width: 260px;
     margin-left: -37px;
     padding-left: 37px;
@@ -278,7 +155,6 @@
   }
 
   .discription__text {
-    position: relative;
     width: 1220px;
     height: 172px;
     margin: 0 auto;
@@ -286,12 +162,6 @@
     margin-top: 77px;
     padding-top: 13px;
     padding-left: 16px;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: left;
-    text-transform: none;
-    color: #444444;
-    border: 1px solid #e7e7e7;
   }
 
   .discription__label {
@@ -302,23 +172,4 @@
     width: 1200px;
     height: 120px;
   }
-  /*
-  .discription__text--quadrate::before {
-    content: "";
-    position: absolute;
-    width: 960px;
-  }
-
-  .discription__text--quadrate::after {
-    content: "* – обязательные поля";
-    position: absolute;
-    top: 289px;
-    left: 860px;
-  }
-
-  .discription__comment {
-    width: 906px;
-    height: 120px;
-  }
-  */
 }

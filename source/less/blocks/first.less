@@ -12,6 +12,11 @@
   height: 305px;
   margin: 0 auto;
   background-image: url("../img/index-background-mobile@1x.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
 }
 
 .first__title {
@@ -29,7 +34,6 @@
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
-
   color: @white;
 }
 
@@ -201,5 +205,10 @@
     background-repeat: no-repeat;
     background-image: url("../img/index-can-desktop@1x.png");
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-can-desktop@2x.jpg");
+      background-size: 1404px auto;
+    }
   }
 }

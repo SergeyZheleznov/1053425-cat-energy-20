@@ -3,19 +3,6 @@
   width: 320px;
   margin: 0 auto;
   min-height: 966px;
-  padding-left: 17px;
-  padding-right: 17px;
-}
-
-.more--greenline::before {
-  content: "";
-  position: absolute;
-  top: 42px;
-  left: 1px;
-  z-index: 3;
-  width: 100%;
-  height: 2px;
-  background-color: @green;
 }
 
 .more__title-wrap {
@@ -23,9 +10,9 @@
   display: block;
   width: 280px;
   height: 87px;
+  margin-left: 17px;
   padding: 0;
-  padding-top: 8px;
-  padding-left: 3px;
+  padding-top: 7px;
   border-bottom: 1px solid #cdcdcd;
 }
 
@@ -39,19 +26,16 @@
   background-color: @white;
 }
 
-.more__title--line::after {
-  content: "";
-  position: absolute;
-  top: 42px;
-  left: 248px;
-  width: 53px;
-  height: 2px;
-  background-color: @green;
+.more__wrap {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .more__list {
   margin: 0;
   padding: 0;
+  padding-left: 17px;
   list-style: none;
 }
 
@@ -140,12 +124,33 @@
 }
 
 .more__card-all {
+  position: relative;
   display: block;
   width: 280px;
-  height: 364px;
+  height: 289px;
+  margin: 0 auto;
   padding: 0;
+  margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 35px;
+}
+
+.more__card-all--back::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 280px;
+  height: 289px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 560px auto;
+  }
 }
 
 .more__card-all-wrap {
@@ -160,7 +165,7 @@
   width: 56px;
   height: 58px;
   margin-left: 111px;
-  margin-top: 65px;
+  margin-top: 25px;
   fill: #ffffff;
 }
 
@@ -171,8 +176,8 @@
   height: 60px;
   margin: 0;
   padding: 0;
-  margin-left: 60px;
-  margin-top: 188px;
+  margin-left: 57px;
+  margin-top: 148px;
 
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -183,30 +188,19 @@
 
 @media (min-width: @tablet-width) {
   .more {
-    width: 100%;
+    width: 728px;
     min-height: 1093px;
-    margin: 0;
     padding: 0;
-    padding-top: 38px;
-  }
-
-  .more--greenline::before {
-    content: "";
-    position: absolute;
-    top: 90px;
-    left: 1px;
-    z-index: 3;
-    width: 100%;
-    height: 2px;
-    background-color: @green;
+    padding-top: 33px;
   }
 
   .more__title-wrap {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    padding-right: 293px;
-    justify-content: center;
+    width: 410px;
+    margin-bottom: 65px;
+    margin-right: 293px;
+    justify-content: left;
     border: none;
   }
 
@@ -217,9 +211,17 @@
     line-height: 36px;
   }
 
+  .more__wrap {
+    width: 710px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .more__list {
     margin: 0;
     margin-top: 60px;
+    margin-left: 5px;
+    padding: 0;
   }
 
   .more__card {
@@ -227,10 +229,10 @@
     min-height: 140px;
     margin: 0;
     padding: 0;
-    margin-left: 30px;
     margin-bottom: -1px;
     padding-top: 13px;
     padding-bottom: 12px;
+    border: 1px solid #cdcdcd;
   }
 
   .more__cell-wrap {
@@ -254,6 +256,7 @@
     padding: 0;
     font-size: 16px;
     line-height: 27px;
+    text-align: right;
   }
 
   .more__cell-right {
@@ -273,24 +276,35 @@
   }
 
   .more__card-all {
-    display: block;
-    width: 703px;
-    height: 345px;
+    width: 608px;
+    height: 200px;
     padding: 0;
+    margin-top: 70px;
     padding-top: 70px;
     padding-bottom: 35px;
   }
 
-  .more__card-all-wrap {
+  .more__card-all--back::after {
+    left: -45px;
     width: 708px;
     height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 1416px auto;
+    }
+  }
+
+  .more__card-all-wrap {
     margin: 0;
     padding: 0;
     margin-left: 30px;
   }
 
   .more__gift {
-    margin-left: 89px;
+    margin-left: 15px;
+    margin-top: -6px;
   }
 
   .more__invite {
@@ -299,31 +313,37 @@
     height: 60px;
     margin: 0;
     padding: 0;
-    margin-left: 422px;
-    margin-top: 71px;
+    margin-left: 349px;
+    margin-top: 1px;
     text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .more {
-    width: auto;
-    min-height: 570px;
+    width: 1440px;
+    min-height: 533px;
+    margin-top: 36px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .more--greenline::before {
-    top: 102px;
-  }
-
   .more__title-wrap {
-    padding-right: 880px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 18px;
+    width: 10px;
+    padding-right: 20px;
   }
 
   .more__title {
+    display: block;
     width: 410px;
-    padding-left: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 56px;
   }
@@ -333,14 +353,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 1310px;
-    height: 400px;
+    height: 380px;
   }
 
   .more__list {
     width: 980px;
     margin: 0;
     padding: 0;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
   .more__card {
@@ -352,7 +372,7 @@
     min-height: 72px;
     margin: 0;
     padding: 0;
-    margin-left: 81px;
+    margin-left: 47px;
     padding-top: 11px;
     border: none;
     border-top: 1px solid #cdcdcd;
@@ -395,6 +415,7 @@
     padding-top: 2px;
     font-size: 16px;
     line-height: 27px;
+    text-align: left;
   }
 
   .more__cell-right {
@@ -420,13 +441,24 @@
   .more__card-all {
     display: block;
     width: 245px;
-    height: 345px;
+    height: 289px;
     margin: 0;
-    margin-left: 45px;
-    margin-top: 1px;
+    margin-left: 85px;
+    margin-top: 40px;
     padding: 0;
     padding-top: 69px;
     padding-bottom: 35px;
+  }
+
+  .more__card-all--back::after {
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 490px auto;
+    }
   }
 
   .more__card-all-wrap {
@@ -435,8 +467,8 @@
   }
 
   .more__gift {
-    margin-left: 95px;
-    margin-top: 61px;
+    margin-left: 22px;
+    margin-top: -5px;
   }
 
   .more__invite {
@@ -444,8 +476,8 @@
     height: 60px;
     margin: 0;
     padding: 0;
-    margin-left: 42px;
-    margin-top: 187px;
+    margin-left: -34px;
+    margin-top: 117px;
     text-align: center;
     color: @white;
   }

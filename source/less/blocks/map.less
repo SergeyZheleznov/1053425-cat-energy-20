@@ -78,6 +78,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../img/bg-map-mobile@1x.png");
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: 100% 724px;
+  }
 }
 
 .map__interactive {
@@ -153,6 +158,11 @@
     height: 400px;
     margin: 0 auto;
     background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+      background-size: auto 400px;
+    }
   }
 
   .map__interactive {
@@ -189,6 +199,10 @@
 
   .map__position {
     background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 
   .map__welcome-wrap {

@@ -1,10 +1,8 @@
 .more {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   min-height: 966px;
-  padding-left: 17px;
-  padding-right: 17px;
-  outline: 1px solid red;
 }
 
 .more__title-wrap {
@@ -12,32 +10,32 @@
   display: block;
   width: 280px;
   height: 87px;
+  margin-left: 17px;
   padding: 0;
-  padding-top: 8px;
+  padding-top: 7px;
   border-bottom: 1px solid #cdcdcd;
-  outline: 1px solid red;
 }
 
 .more__title {
+  z-index: 5;
+  width: 250px;
+  height: 50px;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
-  outline: 1px solid rgb(0, 4, 255);
+  background-color: @white;
 }
 
-.more__title--line::after {
-  content: "";
-  position: absolute;
-  top: 42px;
-  left: 248px;
-  width: 53px;
-  height: 2px;
-  background-color: @green;
+.more__wrap {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .more__list {
   margin: 0;
   padding: 0;
+  padding-left: 17px;
   list-style: none;
 }
 
@@ -52,51 +50,51 @@
 }
 
 .more__cell-wrap {
-  display: grid;
-  grid-template-columns: 138px 142px;
-  grid-template-rows: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 4px;
 }
 
 .more__cell-name {
-  width: 138px;
+  width: 280px;
+  margin-top: 2px;
   padding: 0;
-  padding-left: 2px;
+  padding-left: 4px;
   font-size: 16px;
   line-height: 16px;
   text-align: left;
   text-transform: uppercase;
-  outline: 1px solid rgb(21, 255, 0);
 }
 
 .more__cell {
   width: 138px;
   margin: 0;
+  margin-top: 5px;
+  margin-left: 2px;
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 30px;
   text-align: left;
-
   color: #444444;
-  outline: 1px solid rgb(0, 26, 255);
 }
 
 .more__cell-right {
   width: 142px;
+  margin-top: 4px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 30px;
   text-align: right;
   color: #444444;
-  outline: 1px solid rgb(0, 26, 255);
 }
 
 .more__link {
   display: block;
   width: 280px;
   height: 40px;
-  margin-top: 18px;
+  margin-top: 6px;
 
   font-size: 16px;
   line-height: 40px;
@@ -126,28 +124,40 @@
 }
 
 .more__card-all {
+  position: relative;
   display: block;
   width: 280px;
-  height: 364px;
+  height: 289px;
+  margin: 0 auto;
   padding: 0;
+  margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 35px;
-  outline: 1px solid red;
+}
+
+.more__card-all--back::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 280px;
+  height: 289px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .more__card-all-wrap {
   position: relative;
   display: block;
-  width: 280px;
-  height: 289px;
   margin: 0;
   padding: 0;
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-
-  outline: 1px solid red;
 }
 
 .more__gift {
@@ -155,18 +165,19 @@
   width: 56px;
   height: 58px;
   margin-left: 111px;
-  margin-top: 65px;
+  margin-top: 25px;
   fill: #ffffff;
 }
 
 .more__invite {
+  position: absolute;
   display: inline-block;
   width: 161px;
   height: 60px;
   margin: 0;
   padding: 0;
-  margin-left: 60px;
-  margin-top: 188px;
+  margin-left: 57px;
+  margin-top: 148px;
 
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -177,55 +188,40 @@
 
 @media (min-width: @tablet-width) {
   .more {
-    position: relative;
-    width: 100%;
-    min-height: 1063px;
-    margin: 0;
+    width: 728px;
+    min-height: 1093px;
     padding: 0;
-    padding-top: 38px;
-  }
-
-  .more--greenline::before {
-    position: absolute;
-    content: "";
-    top: 90px;
-    left: 1px;
-    z-index: 3;
-    width: 100%;
-    height: 2px;
-    background-color: @green;
+    padding-top: 33px;
   }
 
   .more__title-wrap {
     display: flex;
     flex-direction: row;
-    position: relative;
-    width: 100%;
-    height: 87px;
-    padding: 0;
-    padding-right: 293px;
-    justify-content: center;
+    width: 410px;
+    margin-bottom: 65px;
+    margin-right: 293px;
+    justify-content: left;
     border: none;
-    outline: 1px solid red;
   }
 
   .more__title {
-    z-index: 5;
     width: 410px;
-    height: 50px;
     padding-left: 35px;
     font-size: 36px;
     line-height: 36px;
-    text-align: left;
-    background-color: @white;
-    outline: 1px solid rgb(0, 4, 255);
+  }
+
+  .more__wrap {
+    width: 710px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .more__list {
     margin: 0;
+    margin-top: 60px;
+    margin-left: 5px;
     padding: 0;
-    list-style: none;
-    margin-top: 68px;
   }
 
   .more__card {
@@ -240,9 +236,6 @@
   }
 
   .more__cell-wrap {
-    display: grid;
-    grid-template-columns: 200px 199px 139px 94px;
-    grid-template-rows: 30px;
     margin: 0;
     margin-left: 38px;
     margin-top: 12px;
@@ -251,164 +244,123 @@
   .more__cell-name {
     width: 200px;
     padding: 0;
-
     font-size: 20px;
     line-height: 20px;
     text-align: left;
     text-transform: uppercase;
-    outline: 1px solid rgb(21, 255, 0);
   }
 
   .more__cell {
-    width: 139px;
+    width: 338px;
     margin: 0;
     padding: 0;
-    font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 27px;
     text-align: right;
-
-    color: #444444;
-    outline: 1px solid rgb(0, 26, 255);
   }
 
   .more__cell-right {
-    width: 94px;
+    width: 96px;
+    margin-top: 1px;
     padding-right: 3px;
-    font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 27px;
-    text-align: right;
-    color: #444444;
-    outline: 1px solid rgb(0, 26, 255);
   }
 
   .more__link {
-    display: block;
     width: 632px;
     height: 38px;
     margin-top: 18px;
     margin-left: 38px;
-
-    font-size: 16px;
     line-height: 38px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @white;
-
-    background-color: @green;
   }
 
   .more__card-all {
-    display: block;
-    width: 708px;
-    height: 345px;
+    width: 608px;
+    height: 200px;
     padding: 0;
+    margin-top: 70px;
     padding-top: 70px;
     padding-bottom: 35px;
-    outline: 1px solid red;
+  }
+
+  .more__card-all--back::after {
+    left: -45px;
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .more__card-all-wrap {
-    position: relative;
-    display: block;
-    width: 708px;
-    height: 200px;
     margin: 0;
     padding: 0;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
-
-    outline: 1px solid red;
+    margin-left: 30px;
   }
 
   .more__gift {
-    position: absolute;
-    width: 56px;
-    height: 58px;
-    margin-left: 89px;
-    margin-top: 65px;
-    fill: #ffffff;
+    margin-left: 15px;
+    margin-top: -6px;
   }
 
   .more__invite {
-    display: inline-block;
     z-index: 10;
     width: 161px;
     height: 60px;
     margin: 0;
     padding: 0;
-    margin-left: 422px;
-    margin-top: 71px;
-
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
+    margin-left: 349px;
+    margin-top: 1px;
     text-align: left;
-    color: @white;
   }
 }
 
 @media (min-width: @desktop-width) {
   .more {
-    position: relative;
-    width: auto;
-    min-height: 530px;
+    width: 1440px;
+    min-height: 533px;
+    margin-top: 36px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .more--greenline::before {
-    position: absolute;
-    content: "";
-    top: 102px;
-    left: 1px;
-    z-index: 3;
-    width: 100%;
-    height: 2px;
-    background-color: @green;
-  }
-
   .more__title-wrap {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    height: 87px;
+    display: block;
+    margin: 0;
     padding: 0;
-    padding-right: 880px;
-    justify-content: center;
-    border: none;
-    outline: 1px solid red;
+    margin-left: 18px;
+    width: 10px;
+    padding-right: 20px;
   }
 
   .more__title {
-    z-index: 5;
+    display: block;
     width: 410px;
-    height: 50px;
-    padding-left: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 56px;
-    text-align: left;
-    background-color: @white;
-    outline: 1px solid rgb(0, 4, 255);
   }
 
   .more__wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 1310px;
+    height: 380px;
   }
 
   .more__list {
-    width: 850px;
+    width: 980px;
     margin: 0;
     padding: 0;
-    margin-top: 68px;
-    list-style: none;
+    margin-top: 40px;
   }
 
   .more__card {
@@ -416,149 +368,116 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 1000px;
-    min-height: 73px;
+    width: 897px;
+    min-height: 72px;
     margin: 0;
     padding: 0;
-    margin-bottom: -1px;
-    padding-top: 13px;
-    padding-bottom: 12px;
+    margin-left: 47px;
+    padding-top: 11px;
     border: none;
-  }
-
-  .more__card--line::after {
-    position: absolute;
-    content: "";
-    top: 1px;
-    left: 80px;
-    width: 895px;
-    height: 1px;
-    background-color: #cdcdcd;
+    border-top: 1px solid #cdcdcd;
   }
 
   .more__card--line-bottom::after {
     position: absolute;
     content: "";
     top: 72px;
-    left: 80px;
+    left: 1px;
     width: 895px;
     height: 1px;
     background-color: #cdcdcd;
   }
 
   .more__cell-wrap {
-    display: grid;
-    grid-template-columns: 210px 150px 210px 84px;
-    grid-template-rows: 25px;
+    justify-content: space-between;
+    width: 612px;
+    height: 32px;
     margin: 0;
-    margin-left: 38px;
-    margin-top: 12px;
-    outline: 1px solid #ff0080;
+    padding: 0;
+    margin-top: 13px;
   }
 
   .more__cell-name {
-    width: 220px;
+    width: 177px;
+    margin: 0;
     padding: 0;
-    padding-left: 40px;
-
     font-size: 20px;
     line-height: 20px;
     text-align: left;
     text-transform: uppercase;
-    outline: 1px solid rgb(21, 255, 0);
   }
 
   .more__cell {
-    width: 139px;
+    width: 190px;
     margin: 0;
     padding: 0;
-    padding-left: 5px;
-    font-family: "Arial", sans-serif;
+    padding-left: 56px;
+    padding-top: 2px;
     font-size: 16px;
     line-height: 27px;
     text-align: left;
-
-    color: #444444;
-    outline: 1px solid rgb(0, 26, 255);
   }
 
   .more__cell-right {
-    width: 94px;
-    padding-left: 40px;
-    font-family: "Arial", sans-serif;
+    width: 64px;
+    margin: 0;
+    padding: 0;
+    padding-left: 19px;
     font-size: 16px;
     line-height: 27px;
     text-align: left;
-    color: #444444;
-    outline: 1px solid rgb(0, 26, 255);
   }
 
   .more__link {
-    display: block;
     width: 244px;
     height: 40px;
-    margin-top: 1px;
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
     margin-left: 38px;
-
-    font-size: 16px;
     line-height: 38px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @white;
-
-    background-color: @green;
   }
 
   .more__card-all {
     display: block;
-    width: 300px;
-    height: 345px;
-    margin-left: 205px;
-    margin-top: 1px;
-    padding: 0;
-    padding-top: 69px;
-    padding-bottom: 35px;
-    outline: 1px solid red;
-  }
-
-  .more__card-all-wrap {
-    position: relative;
-    display: block;
     width: 245px;
     height: 289px;
     margin: 0;
+    margin-left: 85px;
+    margin-top: 40px;
     padding: 0;
+    padding-top: 69px;
+    padding-bottom: 35px;
+  }
 
-    background-size: cover;
-    background-repeat: no-repeat;
+  .more__card-all--back::after {
+    width: 245px;
+    height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
-    outline: 1px solid red;
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .more__card-all-wrap {
+    width: 245px;
+    height: 289px;
   }
 
   .more__gift {
-    position: absolute;
-    width: 56px;
-    height: 58px;
-    margin-left: 95px;
-    margin-top: 61px;
-    fill: #ffffff;
+    margin-left: 22px;
+    margin-top: -5px;
   }
 
   .more__invite {
-    display: inline-block;
-    z-index: 10;
     width: 161px;
     height: 60px;
     margin: 0;
     padding: 0;
-    margin-left: 42px;
-    margin-top: 187px;
-
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
+    margin-left: -34px;
+    margin-top: 117px;
     text-align: center;
     color: @white;
   }

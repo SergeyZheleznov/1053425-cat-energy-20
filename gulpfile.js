@@ -52,4 +52,3 @@ const watch = () => {
 exports.default = gulp.series (
   styles, scripts, server, watch
 );
-

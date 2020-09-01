@@ -15,25 +15,26 @@ const svgstore = require("gulp-svgstore");
 const delt = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
 
 //Styles
 
-const stylesmin = () => {
-  return gulp.src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
+//const stylesmin = () => {
+//  return gulp.src("source/less/style.less")
+//    .pipe(plumber())
+//    .pipe(sourcemap.init())
+//    .pipe(less())
+//    .pipe(postcss([
+//      autoprefixer()
+//    ]))
+//    .pipe(csso())
+//    .pipe(rename("style.min.css"))
+//    .pipe(sourcemap.write("."))
+//    .pipe(gulp.dest("build/css"))
+//    .pipe(sync.stream());
+//}
 
-exports.stylesmin = stylesmin;
+//exports.stylesmin = stylesmin;
 
 const styles = () => {
   return gulp.src("source/less/style.less")
@@ -44,6 +45,10 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(rename("style.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -85,10 +90,20 @@ const html = () => {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(gulp.dest("build"))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
+
+//const minify = () => {
+//  return gulp.src("source/*.html")
+//  .pipe(htmlmin({ collapseWhitespace: true }))
+//  .pipe(gulp.dest("build"));
+//}
+
+//exports.minify = minify;
 
 const clean = () => {
   return delt("build");
@@ -131,10 +146,10 @@ const watcher = () => {
 }
 
 exports.default = gulp.series (
-  stylesmin, styles, server, watcher
+  styles, server, watcher
 );
 
-const build = gulp.series(clean, copy, stylesmin, styles, sprite, html);
+const build = gulp.series(clean, copy, styles, sprite, html);
 exports.build = build;
 
 const start = gulp.series(build, server);

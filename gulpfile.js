@@ -15,6 +15,7 @@ const svgstore = require("gulp-svgstore");
 const delt = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
 
 //Styles
 
@@ -90,6 +91,14 @@ const html = () => {
 
 exports.html = html;
 
+const minify = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest("build"));
+}
+
+exports.minify = minify;
+
 const clean = () => {
   return delt("build");
 }
@@ -127,14 +136,14 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html));
+  gulp.watch("source/*.html", gulp.series(html, minify));
 }
 
 exports.default = gulp.series (
   stylesmin, styles, server, watcher
 );
 
-const build = gulp.series(clean, copy, stylesmin, styles, sprite, html);
+const build = gulp.series(clean, copy, stylesmin, styles, sprite, html, minify);
 exports.build = build;
 
 const start = gulp.series(build, server);

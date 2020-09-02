@@ -409,6 +409,15 @@
     border-bottom: 1px dotted @black;
   }
 
+  .example__text-was:hover {
+    border-bottom: 1px solid #000000;
+  }
+
+  .example__text-was:active,
+  .example__text-was:focus {
+    border-bottom: none;
+  }
+
   .example__scale {
     width: 428px;
     height: 6px;
@@ -430,6 +439,16 @@
     border: 1px solid #cdcdcd;
     border-radius: 17px;
     background-color: #ffffff;
+  }
+
+  .example__scale--body:hover::before {
+    box-shadow: 0 3px 4px 0;
+  }
+
+  .example__scale--body:focus::before,
+  .example__scale--body:active::before {
+    border: 1px solid #68b738;
+    box-shadow: 0 3px 4px 0;
   }
 
   .example__scale--body::after {
@@ -455,6 +474,15 @@
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px dotted @black;
+  }
+
+  .example__text-is:hover {
+    border-bottom: 1px solid @black;
+  }
+
+  .example__text-is:active,
+  .example__text-is:focus {
+    border-bottom: none;
   }
 }
 

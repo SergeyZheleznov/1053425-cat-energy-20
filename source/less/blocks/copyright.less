@@ -1,46 +1,48 @@
 .copyright {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
   width: 280px;
   height: 73px;
 }
 
-.copyright--htmlacademy::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 200px;
-  z-index: 200;
-  width: 30px;
-  height: 70px;
-  background-repeat: no-repeat;
-  background-image: url("../img/htmlacademy.svg");
-}
-
-.copyright--htmlacademy:hover::before {
-  background-image: url("../img/htmlacademy-green.svg");
-}
-
-.copyright--htmlacademy:active::before,
-.copyright--htmlacademy:focus::before {
-  background-image: url("../img/logo-htmlacademy-greenop.svg");
-}
-
 .copyright__link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 287px;
+  height: 82px;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
-.copyright__text {
+.copyright__academy {
   display: block;
   width: 160px;
+  margin: 0;
+  margin-top: 33px;
+  padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
+}
+
+.copyright__picture {
+  width: 41px;
+  height: 82px;
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+  fill: #666666;
+}
+
+.copyright__picture:hover {
+  fill: #68b738;
+}
+
+.copyright__picture:active,
+.copyright__picture:focus {
+  fill-opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,41 +50,11 @@
     width: 256px;
     min-width: 150px;
   }
-
-  .copyright__link {
-    padding: 0;
-  }
-
-  .copyright__academy {
-    width: 120px;
-    height: 20px;
-    margin-top: 47px;
-    margin-left: 62px;
-  }
-
-  .copyright__picture {
-    margin: 0;
-    padding: 0;
-    margin-top: 50px;
-    margin-right: 25px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .copyright {
     width: 300px;
     min-width: 150px;
-  }
-
-  .copyright__academy {
-    width: 130px;
-    height: 20px;
-    margin-top: 54px;
-    margin-left: 28px;
-  }
-
-  .copyright__picture {
-    margin-top: 55px;
-    margin-right: 103px;
   }
 }

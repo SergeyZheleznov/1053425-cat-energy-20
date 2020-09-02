@@ -19,23 +19,6 @@ const htmlmin = require("gulp-htmlmin");
 
 //Styles
 
-//const stylesmin = () => {
-//  return gulp.src("source/less/style.less")
-//    .pipe(plumber())
-//    .pipe(sourcemap.init())
-//    .pipe(less())
-//    .pipe(postcss([
-//      autoprefixer()
-//    ]))
-//    .pipe(csso())
-//    .pipe(rename("style.min.css"))
-//    .pipe(sourcemap.write("."))
-//    .pipe(gulp.dest("build/css"))
-//    .pipe(sync.stream());
-//}
-
-//exports.stylesmin = stylesmin;
-
 const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -96,14 +79,6 @@ const html = () => {
 }
 
 exports.html = html;
-
-//const minify = () => {
-//  return gulp.src("source/*.html")
-//  .pipe(htmlmin({ collapseWhitespace: true }))
-//  .pipe(gulp.dest("build"));
-//}
-
-//exports.minify = minify;
 
 const clean = () => {
   return delt("build");
